@@ -13,6 +13,7 @@
 		35F648AA2510D11B0059DEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F648A92510D11B0059DEE3 /* Assets.xcassets */; };
 		35F648AD2510D11B0059DEE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F648AC2510D11B0059DEE3 /* Preview Assets.xcassets */; };
 		35F648B02510D11B0059DEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F648AE2510D11B0059DEE3 /* LaunchScreen.storyboard */; };
+		35F648B8251134F80059DEE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35F648B7251134F80059DEE3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35F648AC2510D11B0059DEE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35F648AF2510D11B0059DEE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F648B12510D11B0059DEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F648B7251134F80059DEE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		35F648972510D11A0059DEE3 = {
 			isa = PBXGroup;
 			children = (
+				35F648B7251134F80059DEE3 /* README.md */,
 				35F648A22510D11A0059DEE3 /* Memorize */,
 				35F648A12510D11A0059DEE3 /* Products */,
 			);
@@ -58,10 +61,8 @@
 			children = (
 				35F648A32510D11A0059DEE3 /* AppDelegate.swift */,
 				35F648A52510D11A0059DEE3 /* SceneDelegate.swift */,
-				35F648A72510D11A0059DEE3 /* ContentView.swift */,
-				35F648A92510D11B0059DEE3 /* Assets.xcassets */,
-				35F648AE2510D11B0059DEE3 /* LaunchScreen.storyboard */,
-				35F648B12510D11B0059DEE3 /* Info.plist */,
+				35F648B9251136610059DEE3 /* Views */,
+				35F648BA2511369E0059DEE3 /* Supporting Files */,
 				35F648AB2510D11B0059DEE3 /* Preview Content */,
 			);
 			path = Memorize;
@@ -73,6 +74,24 @@
 				35F648AC2510D11B0059DEE3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		35F648B9251136610059DEE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35F648A72510D11A0059DEE3 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		35F648BA2511369E0059DEE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35F648A92510D11B0059DEE3 /* Assets.xcassets */,
+				35F648AE2510D11B0059DEE3 /* LaunchScreen.storyboard */,
+				35F648B12510D11B0059DEE3 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			files = (
 				35F648B02510D11B0059DEE3 /* LaunchScreen.storyboard in Resources */,
 				35F648AD2510D11B0059DEE3 /* Preview Assets.xcassets in Resources */,
+				35F648B8251134F80059DEE3 /* README.md in Resources */,
 				35F648AA2510D11B0059DEE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +308,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = F325XZB89B;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Memorize/Info.plist;
+				INFOPLIST_FILE = "Memorize/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +328,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = F325XZB89B;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Memorize/Info.plist;
+				INFOPLIST_FILE = "Memorize/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
