@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct EmojiMemoryGameView: View {
+    
     @ObservedObject var viewModel: EmojiMemoryGameViewModel
     
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card).onTapGesture {
-                    self.viewModel.choose(card: card)
-                }
+        Grid(viewModel.cards) { card in
+            CardView(card: card).onTapGesture {
+                self.viewModel.choose(card: card)
             }
+            .padding()
         }
         .padding()
         .foregroundColor(Color.orange)
@@ -25,6 +25,7 @@ struct EmojiMemoryGameView: View {
 }
 
 struct CardView: View {
+    
     var card: MemoryGameModel<String>.Card
     
     var body: some View {
@@ -35,12 +36,14 @@ struct CardView: View {
                     RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
                     Text(card.content)
                 } else {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill()
+                    // Карта отрисовывается только, если она не найдена
+                    if !card.isMatched {
+                        RoundedRectangle(cornerRadius: cornerRadius).fill()
+                    }
                 }
             }
             .font(Font.system(size: fontSize(for: geometry.size)))
         }
-        .aspectRatio(2/3, contentMode: .fit)
     }
     
     // MARK: - Drawing Constants
@@ -52,6 +55,7 @@ struct CardView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         EmojiMemoryGameView(viewModel: EmojiMemoryGameViewModel())
     }

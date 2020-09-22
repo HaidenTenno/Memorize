@@ -9,6 +9,7 @@
 import SwiftUI
 
 class EmojiMemoryGameViewModel: ObservableObject {
+    
     @Published private var memoryGameModel: MemoryGameModel<String> = createMemoryGame()
     
     private static func createMemoryGame() -> MemoryGameModel<String> {
