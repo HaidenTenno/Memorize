@@ -8,12 +8,13 @@
 
 import SwiftUI
 
-class EmojiMemoryGameViewModel {
-    private var memoryGameModel: MemoryGameModel<String> = createMemoryGame()
+class EmojiMemoryGameViewModel: ObservableObject {
+    @Published private var memoryGameModel: MemoryGameModel<String> = createMemoryGame()
     
     private static func createMemoryGame() -> MemoryGameModel<String> {
-        let emojis = ["😀", "🤪", "😇", "😎"]
-        return MemoryGameModel(pairs: emojis.count) { pairIndex in emojis[pairIndex] }
+        let numberOfPairs = Int.random(in: 2...5)
+        let emojis = ["😀","😜","🤓","😎","🥶","🤗","👹","👻","🎃","🤖","🤡","😈","🦁","🐵","🐸","🐯","🐹"].shuffled()
+        return MemoryGameModel(pairs: numberOfPairs) { pairIndex in emojis[pairIndex] }
     }
     
     // MARK: - Access to the Model
@@ -26,10 +27,4 @@ class EmojiMemoryGameViewModel {
         memoryGameModel.choose(card: card)
     }
     
-}
-
-struct EmojiMemoryGameViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
 }

@@ -18,10 +18,22 @@ struct MemoryGameModel<CardContent> {
             cards.append(Card(content: content, id: pairIndex * 2))
             cards.append(Card(content: content, id: pairIndex * 2 + 1))
         }
+        cards.shuffle()
     }
     
-    func choose(card: Card) {
+    mutating func choose(card: Card) {
         print("Card chosen: \(card)")
+        let chosenIdex: Int = index(of: card)
+        cards[chosenIdex].isFaceUp.toggle()
+    }
+    
+    func index(of card: Card) -> Int {
+        for index in 0..<cards.count {
+            if cards[index].id == card.id {
+                return index
+            }
+        }
+        preconditionFailure("Element not found")
     }
     
     struct Card: Identifiable {

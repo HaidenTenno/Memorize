@@ -11,7 +11,7 @@
 		35CEED0B2513DB2D00C8EFD2 /* EmojiMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEED0A2513DB2D00C8EFD2 /* EmojiMemoryGameViewModel.swift */; };
 		35F648A42510D11A0059DEE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F648A32510D11A0059DEE3 /* AppDelegate.swift */; };
 		35F648A62510D11A0059DEE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F648A52510D11A0059DEE3 /* SceneDelegate.swift */; };
-		35F648A82510D11A0059DEE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F648A72510D11A0059DEE3 /* ContentView.swift */; };
+		35F648A82510D11A0059DEE3 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F648A72510D11A0059DEE3 /* EmojiMemoryGameView.swift */; };
 		35F648AA2510D11B0059DEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F648A92510D11B0059DEE3 /* Assets.xcassets */; };
 		35F648AD2510D11B0059DEE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F648AC2510D11B0059DEE3 /* Preview Assets.xcassets */; };
 		35F648B02510D11B0059DEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F648AE2510D11B0059DEE3 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		35F648A02510D11A0059DEE3 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F648A32510D11A0059DEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F648A52510D11A0059DEE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		35F648A72510D11A0059DEE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35F648A72510D11A0059DEE3 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		35F648A92510D11B0059DEE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F648AC2510D11B0059DEE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35F648AF2510D11B0059DEE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		35F648B9251136610059DEE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				35F648A72510D11A0059DEE3 /* ContentView.swift */,
+				35F648A72510D11A0059DEE3 /* EmojiMemoryGameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Петр Тартынских ";
 				TargetAttributes = {
 					35F6489F2510D11A0059DEE3 = {
@@ -199,7 +199,7 @@
 				35CEED092513D8A600C8EFD2 /* MemoryGameModel.swift in Sources */,
 				35F648A42510D11A0059DEE3 /* AppDelegate.swift in Sources */,
 				35F648A62510D11A0059DEE3 /* SceneDelegate.swift in Sources */,
-				35F648A82510D11A0059DEE3 /* ContentView.swift in Sources */,
+				35F648A82510D11A0059DEE3 /* EmojiMemoryGameView.swift in Sources */,
 				35CEED0B2513DB2D00C8EFD2 /* EmojiMemoryGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +244,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -304,6 +305,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -341,6 +343,7 @@
 				DEVELOPMENT_TEAM = F325XZB89B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Memorize/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +364,7 @@
 				DEVELOPMENT_TEAM = F325XZB89B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Memorize/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
